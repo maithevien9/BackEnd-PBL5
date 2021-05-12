@@ -26,7 +26,7 @@ module.exports = function (db, username, password, callback) {
                   ID = IDs[0].ID;
                   ID;
 
-                  sql4 = `insert into user value (${ID} , null,null,null,null,null,null, 2, null)`;
+                  sql4 = `insert into user value (${ID} , null,null,null,null,null,1, 2, null)`;
 
                   db.query(sql4, function (err, results, fields) {
                     if (err) {
