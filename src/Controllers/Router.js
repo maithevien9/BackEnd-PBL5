@@ -6,6 +6,9 @@ var GetResult = require("./Result/GetResult");
 var GetStudent = require("./User/GetUserByIDRoll");
 var GetResultWarning = require("./Result/GetResultWarning");
 var GetResultInday = require("./Result/GetResultInday");
+var GetCountResultInDay = require("./Result/GetCountResultInDay");
+var getMe = require("./User/getMe");
+
 module.exports = function (app) {
   Login(app);
   Register(app);
@@ -15,4 +18,6 @@ module.exports = function (app) {
   GetStudent(app);
   GetResultWarning(app);
   GetResultInday(app);
+  getMe(app);
+  GetCountResultInDay(app);
 };
