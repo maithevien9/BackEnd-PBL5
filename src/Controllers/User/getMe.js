@@ -5,7 +5,6 @@ module.exports = function (app) {
   app.get("/getMe", function (req, res) {
     var ID;
     var token = req.headers.authorization.split(" ")[1];
-    // console.log(token);
     jwt.verify(token, "key", (err, data) => {
       if (err) {
         throw err;
