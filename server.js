@@ -23,4 +23,6 @@ app.get("/", function (req, res) {
 });
 Router(app);
 
-app.listen(8008);
+app.listen(8008, () => {
+  console.log("server is running");
+});
