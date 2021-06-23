@@ -18,7 +18,7 @@ module.exports = async function (db, username, password, callback) {
       if (results.length != 0) {
         data = JSON.parse(JSON.stringify(results));
         dataString = "success";
-        jwt.sign({ ID: data[0].ID }, "key", (err, token) => {
+        jwt.sign({ ID: data[0].id }, "key", (err, token) => {
           token;
           callback(dataString, token);
         });
