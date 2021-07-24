@@ -1,16 +1,16 @@
-var mysql = require("mysql");
-var express = require("express");
-var bodyParser = require("body-parser");
+var mysql = require('mysql');
+var express = require('express');
+var bodyParser = require('body-parser');
 
-const cors = require("cors");
-const jwt = require("jsonwebtoken");
-var fileUpload = require("express-fileupload");
+const cors = require('cors');
+const jwt = require('jsonwebtoken');
+var fileUpload = require('express-fileupload');
 const app = express();
-var Router = require("./src/Controllers/Router");
-const db = require("./src/Connect/Connect");
+var Router = require('./src/Controllers/Router');
+const db = require('./src/Connect/Connect');
 
-app.use(express.static("public"));
-app.use(cors());
+app.use(express.static('public'));
+app.use(cors({ credentials: true, origin: true }));
 app.use(fileUpload());
 app.use(express.json());
 app.use(
@@ -18,11 +18,11 @@ app.use(
     extended: true,
   })
 );
-app.get("/", function (req, res) {
-  res.send("hello");
+app.get('/', function (req, res) {
+  res.send('hello');
 });
 Router(app);
 
 app.listen(8008, () => {
-  console.log("server is running");
+  console.log('server is running');
 });
