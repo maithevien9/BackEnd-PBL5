@@ -1,16 +1,14 @@
-var mysql = require("mysql");
+var mysql = require('mysql');
 var connection = mysql.createConnection({
-  // host: "jmr55v3b1g4m6f6e@g84t6zfpijzwx08q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  host: "g84t6zfpijzwx08q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  user: "jycjlj1jpxj60lqo",
-  password: "jmr55v3b1g4m6f6e",
-  database: "bd7e5627afs1fk77",
+  host: 'g84t6zfpijzwx08q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  user: 'jycjlj1jpxj60lqo',
+  password: 'jmr55v3b1g4m6f6e',
+  database: 'bd7e5627afs1fk77',
 });
 
-//mysql://jycjlj1jpxj60lqo:jmr55v3b1g4m6f6e@g84t6zfpijzwx08q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/bd7e5627afs1fk77
 connection.connect(function (err) {
   if (err) {
-    console.log("error when connecting to db:", err);
+    console.log('error when connecting to db:', err);
   }
 });
 

@@ -23,6 +23,8 @@ app.get('/', function (req, res) {
 });
 Router(app);
 
-app.listen(8008, () => {
+const Port = 8008;
+
+app.listen(Port || 3000, function () {
   console.log('server is running');
 });
