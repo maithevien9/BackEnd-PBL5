@@ -23,8 +23,6 @@ app.get('/', function (req, res) {
 });
 Router(app);
 
-const Port = 8008;
-
-app.listen(Port || 3000, function () {
-  console.log('server is running');
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Express server listening on port %d in %s mode', this.address().port, app.settings.env);
 });
