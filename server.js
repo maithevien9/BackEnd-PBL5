@@ -1,6 +1,7 @@
 var mysql = require('mysql');
 var express = require('express');
 var bodyParser = require('body-parser');
+require('dotenv').config();
 
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
@@ -23,8 +24,9 @@ app.get('/', function (req, res) {
 });
 Router(app);
 
-const Port = 8008;
+console.log()
 
-app.listen(Port || 3000, function () {
-  console.log('server is running');
+
+app.listen(process.env.PORT || 5000,function () {
+  console.log('server is running ' + process.env.PORT || 5000);
 });
