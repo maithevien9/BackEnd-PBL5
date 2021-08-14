@@ -1,0 +1,28 @@
+var Login = require("./User/Login");
+var Register = require("./User/Register");
+var RegisterStudent = require("./User/RegisterStudent");
+var ChangeInformationStudent = require("./User/ChangeInformationStudent");
+var GetResult = require("./Result/GetResult");
+var GetStudent = require("./User/GetUserByIDRoll");
+var GetResultWarning = require("./Result/GetResultWarning");
+var GetResultInday = require("./Result/GetResultInday");
+var GetUser = require("./User/GetUsers");
+var GetUserID = require("./User/GetUserByID");
+var GetRecentResult = require("./Result/GetRecentResult");
+var GetTempAndTime = require("./Result/GetTempAndTime");
+var GetResultCountByDay = require ("./Result/GetResultCountByDay");
+module.exports = function (app) {
+  Login(app);
+  Register(app);
+  RegisterStudent(app);
+  ChangeInformationStudent(app);
+  GetResult(app);
+  GetStudent(app);
+  GetResultWarning(app);
+  GetResultInday(app);
+  GetUser(app);
+  GetRecentResult(app);
+  GetTempAndTime(app);
+  GetUserID(app);
+  GetResultCountByDay(app);
+};
