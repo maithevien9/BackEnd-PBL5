@@ -10,7 +10,11 @@ var GetCountResultInDay = require("./Result/GetCountResultInDay");
 var getMe = require("./User/getMe");
 var GetResultByUser = require("./Result/getResultByUser");
 var GetResultSecondary = require("./Result/GetResultSecondary");
-
+var GetUser = require("./User/GetUsers");
+var GetUserID = require("./User/GetUserByID");
+var GetRecentResult = require("./Result/GetRecentResult");
+var GetTempAndTime = require("./Result/GetTempAndTime");
+var GetResultCountByDay = require ("./Result/GetResultCountByDay");
 
 module.exports = function (app) {
   Login(app);
@@ -25,4 +29,9 @@ module.exports = function (app) {
   GetCountResultInDay(app);
   GetResultByUser(app);
   GetResultSecondary(app);
+  GetTempAndTime(app);
+  GetResultCountByDay(app);
+  GetRecentResult(app);
+  GetUserID(app);
+  GetUser(app);
 };
