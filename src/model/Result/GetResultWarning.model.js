@@ -1,6 +1,6 @@
 var dataString = '';
 module.exports = function (db, callback) {
-  let sql = `select result.id, result.createAtTime ,result.temperature, result.isQualified, user.NAME, user.age from result inner JOIN user on result.idUser = user.id where result.isQualified = true and result.temperature > 37 ORDER BY result.createAtTime DESC`;
+  let sql = `SELECT user.id,user.NAME ,temperature,CASE WHEN user.sex = 1 THEN 'Nam' WHEN user.sex = 0 THEN 'Nữ' END as 'Gender',DATE_FORMAT(createAtTime,'%Y-%m-%d %H:%i:%s') as time  FROM result INNER JOIN user ON user.id = result.idUser where isQualified = true and temperature >= 37`;
   db.query(sql, function (err, results, fields) {
     if (err) {
       throw err;
