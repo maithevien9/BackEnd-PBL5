@@ -16,6 +16,7 @@ var GetRecentResult = require('./Result/GetRecentResult');
 var GetTempAndTime = require('./Result/GetTempAndTime');
 var GetResultCountByDay = require('./Result/GetResultCountByDay');
 var GetResultWarningSecondary = require('./Result/GetResultWarningSecondary');
+var ChangeInformationStudentSecondary = require('./User/ChangeInformationStudentSecondary');
 
 module.exports = function (app) {
   Login(app);
@@ -36,4 +37,5 @@ module.exports = function (app) {
   GetUserID(app);
   GetUser(app);
   GetResultWarningSecondary(app);
+  ChangeInformationStudentSecondary(ChangeInformationStudentSecondary);
 };
