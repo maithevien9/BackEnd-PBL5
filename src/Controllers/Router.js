@@ -37,5 +37,5 @@ module.exports = function (app) {
   GetUserID(app);
   GetUser(app);
   GetResultWarningSecondary(app);
-  ChangeInformationStudentSecondary(ChangeInformationStudentSecondary);
+  ChangeInformationStudentSecondary(app);
 };
